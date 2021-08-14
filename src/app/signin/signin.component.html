@@ -45,8 +45,8 @@
                     <div class="logintitle">
                         Sign In
                     </div>
-                    <div class="error" *ngIf="error">
-                        {{errormessage}}
+                    <div class="error" *ngIf="error != ''">
+                        {{error}}
                     </div>
                     <form [formGroup]="formlogin" class="input">
                         <div *ngFor="let x of signindata">
@@ -84,8 +84,8 @@
                     <div class="logintitle">
                         Sign Up
                     </div>
-                    <div class="error" *ngIf="error">
-                        {{errormessage}}
+                    <div class="error" *ngIf="error != ''">
+                        {{error}}
                     </div>
                     <form [formGroup]="formreg" class="input">
                         <div class="regdiv">

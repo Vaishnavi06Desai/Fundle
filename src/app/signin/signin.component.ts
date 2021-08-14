@@ -15,8 +15,7 @@ export class SigninComponent implements OnInit {
   constructor(private as: AuthService, private router: Router) { }
 
   login: boolean = true;
-  error: any;
-  errormessage: string;
+  error: string = '';
 
   signindata: any;
   signupdata: any;
