@@ -1,1 +1,18 @@
-<p>navbar works!</p>
+<div class="main">
+    <div class = "logo" routerLink = "/home">
+        <img src = "../../assets/images/Mana Stithi.png" style = "height: 7vh; width: 20vh;">
+    </div>
+    <div class="options">
+        <div class="nav-bar-item" routerLink={{y.link}} *ngFor="let y of navdata">
+            <div class="nav-bar-item-text">{{y.name}}</div>
+        </div>
+    </div>
+
+    <div class = "welcome">
+        Welcome {{user}}!
+    </div>
+
+    <div class = "logout" (click) = "logout()">
+        Logout
+    </div>
+</div>
