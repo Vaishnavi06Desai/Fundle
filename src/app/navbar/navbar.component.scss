@@ -6,34 +6,16 @@
     display: flex;
     z-index: 100;
     overflow: hidden;
-    // color: white;
-}
-
-.bg{
-    height: 12vh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    background-color: aquamarine;
-}
-
-.bg1{
-    position: sticky;
-    top: 0;
-    background-color: aqua;
-    height: 6vh;
-}
-
-.bg2{
-    position: sticky;
-    top: 0;
     background-color: white;
-    height: 6vh;
+    // color: white;
 }
 
 .logo{
     flex-basis: 10%;
     cursor: pointer;
+    // background-color: aqua;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/fundle-f51a5.appspot.com/o/assets%2FLogo.png?alt=media&token=ad3e66bf-fe0d-4542-85fe-4dc2fa92fcf3");
+    background-size: 100% 100%;
 }
 
 .welcome{
