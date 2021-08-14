@@ -16,6 +16,7 @@ export class SigninComponent implements OnInit {
 
   login: boolean = true;
   error: any;
+  errormessage: string;
 
   signindata: any;
   signupdata: any;
@@ -82,4 +83,7 @@ export class SigninComponent implements OnInit {
       let confirmPass = group.controls.confirmpassword;
       return pass === confirmPass ? null : { notSame: true };
   }
+
+  formlog(name: string) { return this.formlogin.get(name)!; }
+  formregget(name: string) { return this.formreg.get(name)!; }
 }
