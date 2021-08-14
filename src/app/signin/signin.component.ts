@@ -1,9 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { FormControl, FormGroup, FormGroupDirective, NgForm, ValidationErrors, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { loginJson, regJson } from '../JSONData/signin';
 import { AuthService } from '../services/auth.service';
 
+export class MyErrorStateMatcher implements MyErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const invalidCtrl = !!(control && control.invalid && control.parent.dirty);
+    const invalidParent = !!(control && control.parent && control.parent.invalid && control.parent.dirty);
+
+    return (invalidCtrl || invalidParent);
+  }
+}
 
 @Component({
   selector: 'app-signin',
@@ -59,15 +67,15 @@ export class SigninComponent implements OnInit {
   }
 
   formlogin = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.pattern('^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$')]),
+    email: new FormControl('', [Validators.required, Validators.pattern(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]),
     password: new FormControl('', [Validators.required])
   })
 
   formreg = new FormGroup({
     name: new FormControl('', [Validators.required]),
-    email: new FormControl('', [Validators.required, Validators.pattern('^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$')]),
-    phone: new FormControl('', [Validators.required, Validators.pattern('[2-9]{2}\d{8}')]),
-    password: new FormControl('', [Validators.required, Validators.pattern(/^(?=.*d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*s).{8,15}$/)]),
+    email: new FormControl('', [Validators.required, Validators.pattern(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]),
+    phone: new FormControl('', [Validators.required, Validators.pattern(/[2-9]{2}\d{8}/)]),
+    password: new FormControl('', [Validators.required, Validators.pattern(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,15}$/)]),
     confirmpassword: new FormControl('', [Validators.required]),
   })
 
@@ -78,8 +86,8 @@ export class SigninComponent implements OnInit {
   }
 
   checkPasswords(group: FormGroup): ValidationErrors | null {
-      let pass = group.controls.password;
-      let confirmPass = group.controls.confirmpassword;
+      let pass = group.controls.password.value;
+      let confirmPass = group.controls.confirmpassword.value;
       return pass === confirmPass ? null : { notSame: true };
   }
 
