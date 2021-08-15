@@ -13,6 +13,7 @@ export class FormComponent implements OnInit {
 
   @Input() questions: FormBase<string>[] | null = [];
   @Input() value: number;
+  @Input() name: string;
   @Output() onSubmitEmit: EventEmitter<any> = new EventEmitter<any>();
   form!: FormGroup;
   payLoad = '';

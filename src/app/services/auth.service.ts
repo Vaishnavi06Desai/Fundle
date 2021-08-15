@@ -21,12 +21,12 @@ export class AuthService {
     return new Promise((resolve, reject) => {
       this.af.createUserWithEmailAndPassword(user.email, user.password).then(
         usercred => {
-        //   this.insertuserdata(user, usercred).then(res => {
+          this.insertuserdata(user, usercred).then(res => {
             resolve("Success");
-        //   })
-        //     .catch(err => {
-        //       reject(err);
-        //     })
+          })
+            .catch(err => {
+              reject(err);
+            })
         }
       ).catch(err => {
         reject(err);
@@ -34,14 +34,14 @@ export class AuthService {
     })
   }
 
-  // insertuserdata(user, usercred) {
-  //   return this.db.doc(`Users/${usercred.user.uid}`).set({
-  //     email: user.email,
-  //     name: user.name,
-  //     phone: user.phone,
-  //     role: user.role,
-  //   })
-  // }
+  insertuserdata(user, usercred) {
+    return this.db.doc(`Users/${usercred.user.uid}`).set({
+      email: user.email,
+      name: user.name,
+      phone: user.phone,
+      role: user.role,
+    })
+  }
 
   getprofile(useruid: any) {
     return this.db.collection("Users").doc(useruid).snapshotChanges();
