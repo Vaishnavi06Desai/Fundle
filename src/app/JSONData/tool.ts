@@ -44,3 +44,38 @@ export let tools2 = [
         // "func":"(click)='hey()'"
     }
 ]
+export let tools3 = [
+    {
+        "icon":"../../assets/images/rooms.png",
+        "link":"",
+        "alttext":"Rooms",
+        "tooltip":"Rooms",
+        "index":"1",
+        "func":"roomspopup()"
+    },
+    {
+        "icon":"../../assets/images/forum.png",
+        "link":"",
+        "alttext":"Forum",
+        "tooltip":"Forum",
+        "index":"2",
+        "func":"roomspopup()"
+    },
+    {
+        "icon":"../../assets/images/diary.png",
+        "link":"",
+        "alttext":"Moodtracker and diary",
+        "tooltip":"Moodtracker and diary",
+        "index":"3",
+        "func":"roomspopup()"
+    },
+    // {
+    //     "icon":"../../assets/images/diary.png",
+    //     "link":"",
+    //     "alttext":"Diary",
+    //     "tooltip":"Diary",
+    //     "index":"4",
+    //     "func":"roomspopup()"
+    // }
+
+]

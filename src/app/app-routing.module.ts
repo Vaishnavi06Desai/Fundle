@@ -9,6 +9,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { WorkspacesComponent } from './workspaces/workspaces.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
 import { InvoicesComponent } from './invoices/invoices.component';
+import { SaferoomComponent } from './saferoom/saferoom.component';
 
   
 const routes: Routes = [
@@ -39,6 +40,10 @@ const routes: Routes = [
     {
       path: 'workspace',
       component: WorkspaceComponent
+    },
+    {
+      path: 'saferoom',
+      component: SaferoomComponent
     },
     {
       path: 'invoices',
