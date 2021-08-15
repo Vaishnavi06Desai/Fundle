@@ -1,32 +1,50 @@
 <div class="main">
   <div class="start">
-    <div class="tools">
-      <div class="icon" *ngFor="let x of tools">
-        <span tooltip="{{x.tooltip}}" placement="right">
-          <a href="{{x.link}}">
-            <img alt="{{x.alttext}}" src="{{x.icon}}" height="25px">
-          </a>
-        </span>
-      </div>
-      <div>
-        <span tooltip="Add Invoices" placement="right">
-          <button (click)='addinvoices()' height="4vh" width="2vw">
-            <img src="../../assets/images/add.png" height="25px">
-          </button>
-          <div *ngIf="invpopup" class="add">
-            <div class="close" (click)="invpopup = false">
-              <img src="../../assets/images/add.png" height="25px">
+    <div class="information">
+      hello
+      <div class="tools">
+        <div class="icon" *ngFor="let x of tools">
+          <span tooltip="{{x.tooltip}}" placement="right">
+            <div routerLink="{{x.link}}">
+              <img alt="{{x.alttext}}" src="{{x.icon}}" height="25px">
             </div>
-
-            <button (click)='Submit()' height="6vh" width="15vw">Submit</button>
-          </div>
-        </span>
+          </span>
+        </div>
+        <div>
+          <span tooltip="Add Invoices" placement="right">
+            <button (click)='addinvoices()' height="4vh" width="2vw">
+              <img src="../../assets/images/add.png" height="25px">
+            </button>
+            <div *ngIf="invpopup" class="add">
+              <div class="close" (click)="invpopup = false">
+                <img src="../../assets/images/add.png" height="25px">
+              </div>
+              <div class="forform">
+                <div class="formcont">
+                  <div class="formtitle">
+                    Upload your Invoice
+                  </div>
+                  <form class="form">
+                    Name of the Company: <input class="input" placeholder="Company Name" >
+                    Date: <input class="input" placeholder="Date" type="date" >
+                    Upload invoice: <input type="file" id="file" (change)="uploadinvoice($event)" class="input" >
+                    <div class="submitbut" (click)="submit()">
+                      Submit
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- <app-form [questions]="Invoices" [value]="1" [name] = "'Add Projects'"></app-form> -->
+              <!-- <button (click)='Submit()' height="6vh" width="15vw">Submit</button> -->
+            </div>
+          </span>
+        </div>
       </div>
     </div>
-  </div>
-  <div class = "invoices">
-    <div class = "invoiceTable">
-      
+    <div class="invoices">
+      <div class="invoiceTable">
+
+      </div>
     </div>
   </div>
 </div>
