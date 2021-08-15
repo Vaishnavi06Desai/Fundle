@@ -22,5 +22,10 @@ export class TwitterserviceService {
       .pipe(map(data => data));
  
   }
+  getTrending() {
+    return this.http
+      .get<any[]>(this.api_url+'/get_trending')
+      .pipe(map(data => data));
+  }
 }
 
