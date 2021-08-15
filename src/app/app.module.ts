@@ -15,6 +15,9 @@ import { NavdrawerComponent } from './navdrawer/navdrawer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProjectsComponent } from './projects/projects.component';
 import { FormComponent } from './form/form.component';
+import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { FormComponent } from './form/form.component';
     NavbarComponent,
     NavdrawerComponent,
     ProjectsComponent,
-    FormComponent
+    FormComponent,
+    TwitterTimelineComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,8 @@ import { FormComponent } from './form/form.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
-		ReactiveFormsModule
+		ReactiveFormsModule,
+    HttpClientModule
 	],
 providers: [],
   bootstrap: [AppComponent]
