@@ -1,37 +1,30 @@
-<!-- <p>invoices works!</p>
-<p class="inv">invoices works!</p>
-
-<div class="flex-wrapper">
-    <div id="one">Header</div>
-    <div id="two">Nav</div>
-    <div id="three">Content</div>  
-    <div id="four">Footer</div>
-  </div> -->
-  
 <div class="main">
   <div class="start">
     <div class="tools">
       <div class="icon" *ngFor="let x of tools">
         <span tooltip="{{x.tooltip}}" placement="right">
-            <a href="{{x.link}}">
-                <img alt="{{x.alttext}}" src="{{x.icon}}" height="25px">
-            </a>
+          <a href="{{x.link}}">
+            <img alt="{{x.alttext}}" src="{{x.icon}}" height="25px">
+          </a>
         </span>
-    </div>
-    <div>
-      <span tooltip="Add Invoices" placement="right">
+      </div>
+      <div>
+        <span tooltip="Add Invoices" placement="right">
           <button (click)='addinvoices()' height="4vh" width="2vw">
-              <img src="../../assets/images/add.png" height="25px">
+            <img src="../../assets/images/add.png" height="25px">
           </button>
           <div *ngIf="invpopup" class="add">
-              <div class="close" (click)="invpopup = false">
-                  <img src="../../assets/images/add.png" height="25px">
-              </div>
-             
-              <button (click)='Submit()' height="6vh" width="15vw">Submit</button>
+            <div class="close" (click)="invpopup = false">
+              <img src="../../assets/images/add.png" height="25px">
+            </div>
+
+            <button (click)='Submit()' height="6vh" width="15vw">Submit</button>
           </div>
-      </span>
+        </span>
+      </div>
+    </div>
   </div>
-    </div>
-    </div>
+  <div class = "invoices">
+    
+  </div>
 </div>

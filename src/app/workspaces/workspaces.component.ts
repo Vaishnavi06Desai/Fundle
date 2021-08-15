@@ -32,9 +32,11 @@ export class WorkspacesComponent implements OnInit {
   })
   addprojs() {
     this.projpopup = true;
+    this.collabpopup = false;
     console.log("Project added");
   }
   addcollabs() {
+    this.projpopup = false;
     this.collabpopup = true;
     console.log("Collab added")
   }

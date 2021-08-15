@@ -9,6 +9,11 @@ import { PaymentComponent } from './payment/payment.component';
 import { WorkspacesComponent } from './workspaces/workspaces.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
 import { InvoicesComponent } from './invoices/invoices.component';
+import { SaferoomComponent } from './saferoom/saferoom.component';
+import { BeachComponent } from './beach/beach.component';
+import { ForestComponent } from './forest/forest.component';
+import { HouseComponent } from './house/house.component';
+import { MallComponent } from './mall/mall.component';
 
   
 const routes: Routes = [
@@ -39,6 +44,26 @@ const routes: Routes = [
     {
       path: 'workspace',
       component: WorkspaceComponent
+    },
+    {
+      path: 'beach',
+      component:BeachComponent
+    },
+    {
+      path: 'forest',
+      component: ForestComponent
+    },
+    {
+      path: 'house',
+      component: HouseComponent
+    },
+    {
+      path: 'mall',
+      component: MallComponent
+    },
+    {
+      path: 'saferoom',
+      component: SaferoomComponent
     },
     {
       path: 'invoices',

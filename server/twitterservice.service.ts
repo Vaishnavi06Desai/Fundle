@@ -11,7 +11,7 @@ export class TwitterserviceService {
   constructor(private http: HttpClient) { }
   getTimeline() {
     return this.http
-      .get<any[]>(this.api_url+'/home_timeline')
+      .get<any[]>(this.api_url+'/mentions_timeline')
       .pipe(map(data => data));
  
   }

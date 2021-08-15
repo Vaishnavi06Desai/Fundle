@@ -16,16 +16,13 @@ export class ProjectsComponent implements OnInit {
     new TextboxField({
       key: 'firstName',
       label: 'First name',
-      value: 'Bombasto',
       required: true,
-      order: 1
     }),
 
     new TextboxField({
       key: 'emailAddress',
       label: 'Email',
       type: 'email',
-      order: 2
     })
   ];
 

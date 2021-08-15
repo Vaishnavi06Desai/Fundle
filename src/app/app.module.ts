@@ -27,6 +27,10 @@ import { TooltipModule } from 'ng2-tooltip-directive';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { InvoicesComponent } from './invoices/invoices.component';
 import { SaferoomComponent } from './saferoom/saferoom.component';
+import { BeachComponent } from './beach/beach.component';
+import { ForestComponent } from './forest/forest.component';
+import { HouseComponent } from './house/house.component';
+import { MallComponent } from './mall/mall.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +47,11 @@ import { SaferoomComponent } from './saferoom/saferoom.component';
     PaymentComponent,
     WorkspaceComponent,
     InvoicesComponent,
-    SaferoomComponent
+    SaferoomComponent,
+    BeachComponent,
+    ForestComponent,
+    HouseComponent,
+    MallComponent
   ],
   imports: [
     BrowserModule,

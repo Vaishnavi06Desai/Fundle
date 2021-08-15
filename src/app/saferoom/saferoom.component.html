@@ -1,1 +1,35 @@
-<p>saferoom works!</p>
+<div class="main">
+    <audio autoplay loop src="./../../assets/Audios/saferoombg.mp3"></audio>
+    <div class="start">
+        <div class="information">
+            <div *ngIf="rooms" class="rooms">
+                <div class = "boxes">
+                    <div class ="box" *ngFor="let z of safedata" routerLink={{z.link}}>{{z.name}}</div>
+                    <!-- <div class ="container" *ngFor="let x of safedata" data-tilt data-tilt-scale="0.95" data-tilt-startY="40">{{x.name}}</div> -->
+                </div>
+            </div>
+            <div *ngIf="forum"class="forum">
+                <p>This is forum</p>
+            </div>
+            <div *ngIf="mood"class="moodtracker">
+                <p>This is moodtracker</p>
+            </div>
+            <!-- <div *ngIf="diary"class="diary">
+                <p>This is diary</p>
+            </div> -->
+        </div>
+        <div class="tools">
+            <div class="icon" *ngFor="let x of tools; let i = index">
+                <span tooltip="{{x.tooltip}}" placement="right">
+                    <!-- <a href="{{x.link}}">
+                        <img alt="{{x.alttext}}" src="{{x.icon}}" height="25px">
+                    </a> -->
+                    <button (click)='callfunc(i)'>
+                        <img alt="{{x.alttext}}" src="{{x.icon}}"height="25px">
+                    </button>
+                </span>
+            </div>
+
+        </div>
+    </div>
+</div>

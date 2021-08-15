@@ -20,7 +20,7 @@ export class TwitterTimelineComponent implements OnInit {
       .subscribe(
         myTimeline => {
           this.myTimeline = myTimeline;
-          console.log(this.myTimeline);
+          console.log(this.myTimeline.data.length);
         }
       )
    }

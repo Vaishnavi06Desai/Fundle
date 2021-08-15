@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { tools3 } from '../JSONData/tool'
+import { safedata } from '../JSONData/safedata'
 
 @Component({
   selector: 'app-saferoom',
@@ -7,9 +9,60 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SaferoomComponent implements OnInit {
 
-  constructor() { }
+  tools: any;
+  safedata:any;
+  rooms: boolean;
+  forum: boolean;
+  mood: boolean;
+  // diary: boolean;
 
+  constructor() { }
   ngOnInit(): void {
+    this.tools = tools3;
+    this.safedata=safedata;
+    this.rooms = false;
+    this.forum = true;
+    this.mood = false;
+    // this.diary = false;
   }
 
+  callfunc(i: any) {
+    if (i == 0) {
+      this.roomspopup();
+    }
+    else {
+      if (i == 1) {
+        this.forumpopup();
+      }
+      else {
+      
+         this.moodpopup();
+        
+      }
+    }
+  }
+  roomspopup() {
+    this.rooms = true;
+    this.forum = false;
+    this.mood = false;
+    // this.diary = false;
+  }
+  forumpopup() {
+    this.rooms = false;
+    this.forum = true;
+    this.mood = false;
+    // this.diary = false;
+  }
+  moodpopup() {
+    this.rooms = false;
+    this.forum = false;
+    this.mood = true;
+    // this.diary = false;
+  }
+  // diarypopup() {
+  //   this.rooms = false;
+  //   this.forum = false;
+  //   this.mood = false;
+  //   this.diary = true;
+  // }
 }
