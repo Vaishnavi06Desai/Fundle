@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NavdrawerComponent } from './navdrawer/navdrawer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { WorkspacesComponent } from './workspaces/workspaces.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SigninComponent,
     HomeComponent,
     NavbarComponent,
-    NavdrawerComponent
+    NavdrawerComponent,
+    WorkspacesComponent
   ],
   imports: [
     BrowserModule,
