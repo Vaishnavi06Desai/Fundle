@@ -21,16 +21,22 @@ body{
 //  }
 
 :root {
-    --col4: rgb(178, 154, 231);
-    --col4d:rgb(45, 88, 72);
-    --col4l: rgb(66, 126, 103);
-    --col4vl: rgb(123, 228, 188);
-    --col5: rgb(212, 212, 212);
+    // --col4: rgb(178, 154, 231);
+    // --col4d:rgb(45, 88, 72);
+    // --col4l: rgb(66, 126, 103);
+    // --col4vl: rgb(123, 228, 188);
+    // --col5: rgb(212, 212, 212);
+    // --appbg: #FFF4F4;
+    --org: #ffac5e;
+    --peach:#ffbdb2;
+    --blgr: #b2ced6;
+    --lpink: #fee0dc;
+    --gr: #61847a;
     --appbg: #FFF4F4;
  }
 
 .custbutton {
-    background-color: var(--col4);
+    background-color: var(--peach);
     position: relative;
     border-radius: 2px;
     padding: 2% 5%;

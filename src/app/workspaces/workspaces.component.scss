@@ -74,13 +74,13 @@ button{
 }
 .add
 {
-  height:40vh;
-  width: 40vh;
-  background-color: #fff;
+  // height:100%;
+  // width: 100%;
+  background-color: var(--peach);
   // color: #fff;
   position:absolute;
   top:15vh;
-  left:40vw;
+  left:25vw;
 }
 .close
 {
@@ -153,13 +153,13 @@ button{
             }
   
             .Projname {
-              background-color: #fffc00;
+              background-color: #000;
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
             }
   
             .Info {
-              background-color: #00fffc;
+              background-color: #61847a;
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
             }
@@ -180,7 +180,7 @@ button{
               text-align: center;
               font-size: 40px;
               font-family: 'Courier New', Courier, monospace;
-              color: #fff;
+              color: #ffac5e;
             //   background-color: black;
               transition: 0.5s;
               text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -197,6 +197,7 @@ button{
   
         h2 {
           font-size: 2em;
+          color: #b2ced6;
         }
       }
       // @each $num in $numbers{
