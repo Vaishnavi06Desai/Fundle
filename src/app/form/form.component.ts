@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { FormBase } from '../form-template/form-base';
+import { FormControlServiceService } from '../form-template/form-control-service.service';
 
 @Component({
   selector: 'app-form',
@@ -8,17 +10,20 @@ import { FormBuilder } from '@angular/forms';
 })
 export class FormComponent implements OnInit {
 
-  constructor(private fb: FormBuilder) { }
+  @Input() questions: FormBase<string>[] | null = [];
+  @Output() onSubmitEmit: EventEmitter<any> = new EventEmitter<any>();
+  form!: FormGroup;
+  payLoad = '';
 
-  addtrig = this.fb.group({
-    Amount: ['']
-  })
+  constructor(private fcs: FormControlServiceService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.form = this.fcs.toFormGroup(this.questions as FormBase<string>[]);
   }
 
-  submittrigger(){
-    
+  onSubmit() {
+    this.payLoad = JSON.stringify(this.form.getRawValue());
+    this.onSubmitEmit.emit(this.form.value);
   }
 
 }
