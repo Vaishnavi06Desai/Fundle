@@ -14,6 +14,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NavdrawerComponent } from './navdrawer/navdrawer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WorkspacesComponent } from './workspaces/workspaces.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { WorkspacesComponent } from './workspaces/workspaces.component';
     HomeComponent,
     NavbarComponent,
     NavdrawerComponent,
-    WorkspacesComponent
+    WorkspacesComponent,
+    ProjectsComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,10 @@ export class AuthService {
 
   constructor(private af: AngularFireAuth, private db: AngularFirestore) { }
 
+  getUserState() {
+    return this.af.authState;
+  }
+  
   login(user: any) {
     return this.af.signInWithEmailAndPassword(user.email, user.password);
   }

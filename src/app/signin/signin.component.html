@@ -91,7 +91,7 @@
                         <div class="regdiv">
                             <div *ngFor="let x of signupdata" style="height: 20%;">
                                 <input placeholder="{{x.placeholder}}" formControlName={{x.formname}} type={{x.type}}
-                                    class="ip" *ngIf=!x.error>
+                                    class="ip">
                                 <div *ngIf="formregget(x.formname).invalid && (formregget(x.formname).dirty || formregget(x.formname).touched)"
                                     class="alert alert-danger">
                                     <div *ngIf="formregget(x.formname).errors?.required">
