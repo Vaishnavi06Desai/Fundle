@@ -14,7 +14,7 @@ export class SaferoomComponent implements OnInit {
   rooms: boolean;
   forum: boolean;
   mood: boolean;
-  diary: boolean;
+  // diary: boolean;
 
   constructor() { }
   ngOnInit(): void {
@@ -23,7 +23,7 @@ export class SaferoomComponent implements OnInit {
     this.rooms = false;
     this.forum = true;
     this.mood = false;
-    this.diary = false;
+    // this.diary = false;
   }
 
   callfunc(i: any) {
@@ -35,12 +35,9 @@ export class SaferoomComponent implements OnInit {
         this.forumpopup();
       }
       else {
-        if (i == 2) {
+      
          this.moodpopup();
-        }
-        else {
-          this.diarypopup();
-        }
+        
       }
     }
   }
@@ -48,24 +45,24 @@ export class SaferoomComponent implements OnInit {
     this.rooms = true;
     this.forum = false;
     this.mood = false;
-    this.diary = false;
+    // this.diary = false;
   }
   forumpopup() {
     this.rooms = false;
     this.forum = true;
     this.mood = false;
-    this.diary = false;
+    // this.diary = false;
   }
   moodpopup() {
     this.rooms = false;
     this.forum = false;
     this.mood = true;
-    this.diary = false;
+    // this.diary = false;
   }
-  diarypopup() {
-    this.rooms = false;
-    this.forum = false;
-    this.mood = false;
-    this.diary = true;
-  }
+  // diarypopup() {
+  //   this.rooms = false;
+  //   this.forum = false;
+  //   this.mood = false;
+  //   this.diary = true;
+  // }
 }
