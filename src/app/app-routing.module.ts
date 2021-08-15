@@ -6,7 +6,9 @@ import { ProjectsComponent } from './projects/projects.component';
 import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.component';
 import { PaymentComponent } from './payment/payment.component';
 
+import { WorkspacesComponent } from './workspaces/workspaces.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
+
   
 const routes: Routes = [
     {
@@ -29,6 +31,10 @@ const routes: Routes = [
     path: 'payment',
     component: PaymentComponent
   },
+    {
+      path: 'Workspaces',
+      component: WorkspacesComponent
+    },
     {
       path: 'workspace',
       component: WorkspaceComponent
