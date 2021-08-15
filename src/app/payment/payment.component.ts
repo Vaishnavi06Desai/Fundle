@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./payment.component.scss']
 })
 export class PaymentComponent implements OnInit {
-  
-  json : {
+
+  json={
     "amount": 1000,
     "currency": "INR",
     "reference_id": "Fundle101",
@@ -30,16 +30,16 @@ export class PaymentComponent implements OnInit {
   }
   payment() {
 
-    this.httpClient.post<any>('https://api.razorpay.com/v1/payment_links/',this.json, {
-      headers: { 'Authorization': 'Basic cnpwX3Rlc3RfSVYzeUtxbnNrRk92VWc6QmFPbUtlSTF3dFF2bjlKRHRSZ3RGSnZZ'}
+    this.httpClient.post<any>('https://fundle-backend.herokuapp.com/v1/fundle/request_Payment', { 'payload': this.json }, {
+
     }).subscribe(
       (res) => {
         console.log(res);
-       
+
       },
       (err) => {
         console.log(err);
-    
+
       }
     );
   }
