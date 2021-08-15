@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { tools } from '../JSONData/tool';
-import { projects } from '../JSONData/projects';
+// import { projects } from '../JSONData/projects';
 import { FormControl, FormGroup } from '@angular/forms';
 import { FormBase } from '../form-template/form-base';
 import { TextboxField } from '../form-template/form-textbox';
+import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 
 @Component({
@@ -17,18 +20,20 @@ export class WorkspacesComponent implements OnInit {
   proj: any;
   projpopup: boolean;
   collabpopup: boolean;
+  userID: any;
+  projects: Array<any> = [];
 
-  constructor() { }
+  constructor(private router: Router, private as: AuthService, private db: AngularFirestore) { }
   Projects: FormBase<string>[] = [
 
     new TextboxField({
-      key: 'Project Name',
+      key: 'project_name',
       label: 'Project Name',
       required: true,
     }),
 
     new TextboxField({
-      key: 'Brief',
+      key: 'brief',
       label: 'Brief',
       required: true,
       // type: 'email',
@@ -52,8 +57,15 @@ export class WorkspacesComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.as.getUserState()
+    .subscribe(user => {
+      if(user == null){this.router.navigate(['/signin'])}
+      this.userID = user.uid;
+      this.getProjects();
+    })
+
     this.tools = tools;
-    this.proj = projects;
+    // this.proj = projects;
     this.projpopup = false;
     this.collabpopup = false;
   }
@@ -76,5 +88,12 @@ export class WorkspacesComponent implements OnInit {
     console.log(this.form.value);
     this.projpopup = false;
     this.collabpopup = false;
+  }
+
+  getProjects(){
+    this.db.collection("Workspaces").doc(this.userID).collection("Projects").snapshotChanges().subscribe(res => {
+      this.projects = res;
+      console.log(this.projects[0].payload.doc.data());
+    })
   }
 }

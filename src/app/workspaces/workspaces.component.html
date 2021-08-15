@@ -2,19 +2,19 @@
     <div class="start">
         <div class="information">
             <div class="cards">
-                <div class="container" *ngFor="let y of proj" style="border-radius: 15px">
+                <div class="container" *ngFor="let y of projects" style="border-radius: 15px">
                     <!-- *ngFor="let y of cards"> -->
 
                     <div class="card">
                         <div class="face face1">
                             <div class="content">
                                 <!-- <span class="stars"></span> -->
-                                <h2 class="Projname">{{y.projname}}</h2>
-                                <p class="Info">{{y.projinfo}}</p>
+                                <!-- <h2 class="Projname">{{y.payload.doc.data().project_name}}</h2> -->
+                                <p class="Info">{{y.payload.doc.data().brief}}</p>
                             </div>
                         </div>
                         <div class="face face2">
-                            <h2>{{y.projname}}</h2>
+                            <h2>{{y.payload.doc.data().project_name}}</h2>
                         </div>
                     </div>
                 </div>
