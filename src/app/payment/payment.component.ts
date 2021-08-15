@@ -6,7 +6,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./payment.component.scss']
 })
 export class PaymentComponent implements OnInit {
-  json: any = {
+
+  json={
     "amount": 1000,
     "currency": "INR",
     "reference_id": "Fundle101",
@@ -29,14 +30,16 @@ export class PaymentComponent implements OnInit {
   }
   payment() {
 
-    this.httpClient.post<any>('http://localhost:5001/v1/fundle/request_Payment', this.json).subscribe(
+    this.httpClient.post<any>('https://fundle-backend.herokuapp.com/v1/fundle/request_Payment', { 'payload': this.json }, {
+
+    }).subscribe(
       (res) => {
         console.log(res);
-       
+
       },
       (err) => {
         console.log(err);
-    
+
       }
     );
   }

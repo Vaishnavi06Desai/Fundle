@@ -8,6 +8,7 @@ import { PaymentComponent } from './payment/payment.component';
 
 import { WorkspacesComponent } from './workspaces/workspaces.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
+import { InvoicesComponent } from './invoices/invoices.component';
 
   
 const routes: Routes = [
@@ -39,6 +40,10 @@ const routes: Routes = [
       path: 'workspace',
       component: WorkspaceComponent
     },
+    {
+      path: 'invoices',
+      component: InvoicesComponent
+    }
 ];
 
 @NgModule({

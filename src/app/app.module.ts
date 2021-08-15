@@ -22,6 +22,7 @@ import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.co
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { PaymentComponent } from './payment/payment.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
+import { InvoicesComponent } from './invoices/invoices.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { WorkspaceComponent } from './workspace/workspace.component';
     FormTemplateComponent,
     TwitterTimelineComponent,
     PaymentComponent,
-    WorkspaceComponent
+    WorkspaceComponent,
+    InvoicesComponent
   ],
   imports: [
     BrowserModule,
