@@ -15,6 +15,7 @@ import { NavdrawerComponent } from './navdrawer/navdrawer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProjectsComponent } from './projects/projects.component';
 import { FormComponent } from './form/form.component';
+import { FormTemplateComponent } from './form-template/form-template.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormComponent } from './form/form.component';
     NavbarComponent,
     NavdrawerComponent,
     ProjectsComponent,
-    FormComponent
+    FormComponent,
+    FormTemplateComponent
   ],
   imports: [
     BrowserModule,
