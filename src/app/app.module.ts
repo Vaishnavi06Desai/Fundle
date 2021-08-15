@@ -18,6 +18,9 @@ import { WorkspacesComponent } from './workspaces/workspaces.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FormComponent } from './form/form.component';
 import { FormTemplateComponent } from './form-template/form-template.component';
+import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { PaymentComponent } from './payment/payment.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
 
 @NgModule({
@@ -31,6 +34,8 @@ import { WorkspaceComponent } from './workspace/workspace.component';
     ProjectsComponent,
     FormComponent,
     FormTemplateComponent,
+    TwitterTimelineComponent,
+    PaymentComponent,
     WorkspaceComponent
   ],
   imports: [
@@ -41,6 +46,7 @@ import { WorkspaceComponent } from './workspace/workspace.component';
     AngularFireAuthModule,
     AngularFirestoreModule,
 		ReactiveFormsModule,
+    HttpClientModule,
     ChartsModule
 	],
 providers: [],

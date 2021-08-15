@@ -4,14 +4,14 @@ import { Router } from '@angular/router';
 import { loginJson, regJson } from '../JSONData/signin';
 import { AuthService } from '../services/auth.service';
 
-export class MyErrorStateMatcher implements MyErrorStateMatcher {
-  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
-    const invalidCtrl = !!(control && control.invalid && control.parent.dirty);
-    const invalidParent = !!(control && control.parent && control.parent.invalid && control.parent.dirty);
+// export class MyErrorStateMatcher implements MyErrorStateMatcher {
+//   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+//     const invalidCtrl = !!(control && control.invalid && control.parent.dirty);
+//     const invalidParent = !!(control && control.parent && control.parent.invalid && control.parent.dirty);
 
-    return (invalidCtrl || invalidParent);
-  }
-}
+//     return (invalidCtrl || invalidParent);
+//   }
+// }
 
 @Component({
   selector: 'app-signin',
