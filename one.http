@@ -1,2 +1,1 @@
-GET https://api.razorpay.com/v1/payment_links/
-HEAD 
+GET https://api.twitter.com/1.1/trends/place.json 
