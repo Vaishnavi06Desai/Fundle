@@ -22,7 +22,11 @@ import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.co
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { PaymentComponent } from './payment/payment.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
+// import {} from '@angular/material'
+import { TooltipModule } from 'ng2-tooltip-directive';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { InvoicesComponent } from './invoices/invoices.component';
+import { SaferoomComponent } from './saferoom/saferoom.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +42,8 @@ import { InvoicesComponent } from './invoices/invoices.component';
     TwitterTimelineComponent,
     PaymentComponent,
     WorkspaceComponent,
-    InvoicesComponent
+    InvoicesComponent,
+    SaferoomComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +52,8 @@ import { InvoicesComponent } from './invoices/invoices.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    MatTooltipModule,
+    TooltipModule,
 		ReactiveFormsModule,
     HttpClientModule,
     ChartsModule
