@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ChartsModule } from 'ng2-charts';
 
 import { AngularFireModule } from '@angular/fire';
 import {AngularFireAuthModule} from '@angular/fire/auth';
@@ -13,9 +14,11 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NavdrawerComponent } from './navdrawer/navdrawer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { WorkspacesComponent } from './workspaces/workspaces.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FormComponent } from './form/form.component';
 import { FormTemplateComponent } from './form-template/form-template.component';
+import { WorkspaceComponent } from './workspace/workspace.component';
 
 @NgModule({
   declarations: [
@@ -24,9 +27,11 @@ import { FormTemplateComponent } from './form-template/form-template.component';
     HomeComponent,
     NavbarComponent,
     NavdrawerComponent,
+    WorkspacesComponent,
     ProjectsComponent,
     FormComponent,
-    FormTemplateComponent
+    FormTemplateComponent,
+    WorkspaceComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,8 @@ import { FormTemplateComponent } from './form-template/form-template.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
-		ReactiveFormsModule
+		ReactiveFormsModule,
+    ChartsModule
 	],
 providers: [],
   bootstrap: [AppComponent]
