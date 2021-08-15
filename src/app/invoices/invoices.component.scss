@@ -1,0 +1,32 @@
+.inv{
+ height: 100vh;
+background-image: url('../../assets/images/invoices.png');
+
+background-position: center center;
+
+background-repeat: no-repeat;
+
+background-attachment: fixed;
+
+background-size: cover;
+
+background-color: #464646;
+}
+.flex-wrapper { 
+    display: flex; 
+  } 
+  .flex-wrapper{ 
+    display: flex; 
+    background-color: beige; 
+  
+  div { 
+    background-color: green; 
+    height: 100px; 
+    width: 100px; 
+    margin: 10px; 
+    flex-grow: 1; 
+  }
+  #one{ 
+    flex-grow: 10;
+  }
+}

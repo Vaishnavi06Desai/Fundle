@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./payment.component.scss']
 })
 export class PaymentComponent implements OnInit {
-  //json: any;
+  
   json : {
     "amount": 1000,
     "currency": "INR",
