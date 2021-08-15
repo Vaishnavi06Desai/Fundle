@@ -38,7 +38,7 @@ const routes: Routes = [
     component: PaymentComponent
   },
     {
-      path: 'workspaces',
+      path: 'Workspaces',
       component: WorkspacesComponent
     },
     {

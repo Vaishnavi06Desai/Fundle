@@ -2,16 +2,20 @@ $numbers:("1","2","3");
 .main
 {
     margin-top: 6vh;
-    background-color: aqua;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/fundle-f51a5.appspot.com/o/assets%2F30ff07936ec8c506f7dd18a7d5d03814.jpg?alt=media&token=14fe350e-3f6b-4747-ae1b-3947861420a7');
     height:100%;
     max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .start
 {
     // height:100%;
     max-width: 100vw;
-    background-color: bisque;
+    // background-color: bisque;
 }
 
 .tools
@@ -22,12 +26,12 @@ $numbers:("1","2","3");
     width: 5vw;
     // position: absolute;
     position: fixed;
-    background-color: rgb(72, 46, 14);
+    background-color: #fee0dc;
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    border-radius: 20%;
+    border-radius: 15px;;
 }
 
 .icon
@@ -45,6 +49,14 @@ $numbers:("1","2","3");
     align-items: center;
     justify-content: space-evenly;
     // background-image: url('../../assets/images/trending.png');
+}
+.information
+{
+    background-color: #fff;
+    border: solid black;
+    width: 80vw;
+    margin:10vh;
+    border-radius: 15px;;
 }
 button{
     
@@ -96,6 +108,8 @@ button{
     min-height: 100vh;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 20vh 10vh 10vh 10vh;
     // background-color: #a9c9ff;
     // background-image: linear-gradient(180deg, #a9c9ff 0%, #ffbbec 100%);
   
@@ -115,7 +129,7 @@ button{
         width: 300px;
         height: 400px;
         margin: 0 auto;
-        background: #000;
+        background: #b2ced6;
         border-radius: 15px;
         box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
   
@@ -158,6 +172,7 @@ button{
             text-shadow: 0 0 1em transparentize(black, 0.5);
             background: transparentize(white, 0.8);
             backdrop-filter: blur(20px);
+            border-radius: 15px;
   
             h2 {
               margin: 20px;
@@ -178,6 +193,7 @@ button{
   
       .card:hover .face.face2 {
         height: 60px;
+        background: #ffac5e;
   
         h2 {
           font-size: 2em;
