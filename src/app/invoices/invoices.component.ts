@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBase } from '../form-template/form-base';
+import { TextboxField } from '../form-template/form-textbox';
 import { tools2 } from '../JSONData/tool';
 
 @Component({
@@ -10,6 +12,17 @@ export class InvoicesComponent implements OnInit {
 
   tools:any;
   invpopup:boolean;
+
+  fields: FormBase<string>[] = [
+
+    new TextboxField({
+      key: 'date',
+      label: 'Date',
+      type: 'date',
+      required: true,
+    }),
+
+  ];
 
   constructor() { }
 

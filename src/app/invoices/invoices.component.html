@@ -14,17 +14,15 @@
             <img src="../../assets/images/add.png" height="25px">
           </button>
           <div *ngIf="invpopup" class="add">
-            <div class="close" (click)="invpopup = false">
-              <img src="../../assets/images/add.png" height="25px">
-            </div>
-
-            <button (click)='Submit()' height="6vh" width="15vw">Submit</button>
+            <app-form [questions]="fields" [value]="2" [name] = "'Add a Bill'"></app-form>
           </div>
         </span>
       </div>
     </div>
   </div>
   <div class = "invoices">
-    
+    <div class = "invoiceTable">
+
+    </div>
   </div>
 </div>

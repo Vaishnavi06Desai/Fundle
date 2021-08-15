@@ -29,7 +29,7 @@
                 </div>
                 <div>
                     <span tooltip="Add Projects" placement="right">
-                        <button (click)='addprojs()' height="4vh" width="2vw">
+                        <button class="toolbutton"(click)='addprojs()' height="4vh" width="2vw">
                             <img src="../../assets/images/add.png" height="25px">
                         </button>
                         <div *ngIf="projpopup" class="add">
@@ -37,18 +37,15 @@
                                 <img src="../../assets/images/add.png" height="25px">
                             </div>
                             <div class="inputs">
-                                <form [formGroup]="form">
-                                    <input placeholder="Enter your project name" formControlName="Projectname">
-                                    <input placeholder="Enter your project information" formControlName="Info">
-                                </form>
+                                <app-form [questions]="Projects" [value]="1" [name] = "'Add Projects'"></app-form>
                             </div>
-                            <button (click)='Submit()' height="6vh" width="15vw">Submit</button>
+                            <!-- <button class="toolbutton"(click)='Submit()' height="6vh" width="15vw">Submit</button> -->
                         </div>
                     </span>
                 </div>
                 <div>
                     <span tooltip="Add Collaboration" placement="right">
-                        <button (click)='addcollabs()'>
+                        <button class="toolbutton"(click)='addcollabs()'>
                             <img src="../../assets/images/Collaboration.png" height="25px">
                         </button>
                         <div *ngIf="collabpopup" class="add">
@@ -56,10 +53,11 @@
                                 <img src="../../assets/images/add.png" height="25px">
                             </div>
                             <div class="inputs">
-                                <form [formGroup]="form">
+                                <app-form [questions]="Collaboration" [value]="1" [name] = "'Add Projects'"></app-form>
+                                <!-- <form [formGroup]="form">
                                     <input placeholder="Enter your project name" formControlName="Projectname">
                                     <input placeholder="Enter your project information" formControlName="Info">
-                                </form>
+                                </form> -->
                             </div>
                         </div>
                     </span>
