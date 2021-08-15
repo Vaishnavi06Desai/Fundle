@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NavdrawerComponent } from './navdrawer/navdrawer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { WorkspacesComponent } from './workspaces/workspaces.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FormComponent } from './form/form.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
@@ -25,6 +26,7 @@ import { WorkspaceComponent } from './workspace/workspace.component';
     HomeComponent,
     NavbarComponent,
     NavdrawerComponent,
+    WorkspacesComponent,
     ProjectsComponent,
     FormComponent,
     WorkspaceComponent
