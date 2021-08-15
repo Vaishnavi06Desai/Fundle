@@ -21,6 +21,9 @@ import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.co
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { PaymentComponent } from './payment/payment.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
+// import {} from '@angular/material'
+import { TooltipModule } from 'ng2-tooltip-directive';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { InvoicesComponent } from './invoices/invoices.component';
 
 @NgModule({
@@ -45,6 +48,8 @@ import { InvoicesComponent } from './invoices/invoices.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    MatTooltipModule,
+    TooltipModule,
 		ReactiveFormsModule,
     HttpClientModule,
     ChartsModule
