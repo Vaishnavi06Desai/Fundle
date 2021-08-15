@@ -25,6 +25,7 @@ import { WorkspaceComponent } from './workspace/workspace.component';
 import { TooltipModule } from 'ng2-tooltip-directive';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { InvoicesComponent } from './invoices/invoices.component';
+import { SaferoomComponent } from './saferoom/saferoom.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { InvoicesComponent } from './invoices/invoices.component';
     TwitterTimelineComponent,
     PaymentComponent,
     WorkspaceComponent,
-    InvoicesComponent
+    InvoicesComponent,
+    SaferoomComponent
   ],
   imports: [
     BrowserModule,
