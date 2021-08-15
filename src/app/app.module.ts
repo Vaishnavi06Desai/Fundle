@@ -17,6 +17,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WorkspacesComponent } from './workspaces/workspaces.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FormComponent } from './form/form.component';
+import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { PaymentComponent } from './payment/payment.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
 // import {} from '@angular/material'
 import { TooltipModule } from 'ng2-tooltip-directive';
@@ -33,6 +36,8 @@ import { InvoicesComponent } from './invoices/invoices.component';
     WorkspacesComponent,
     ProjectsComponent,
     FormComponent,
+    TwitterTimelineComponent,
+    PaymentComponent,
     WorkspaceComponent,
     InvoicesComponent
   ],
@@ -46,6 +51,7 @@ import { InvoicesComponent } from './invoices/invoices.component';
     MatTooltipModule,
     TooltipModule,
 		ReactiveFormsModule,
+    HttpClientModule,
     ChartsModule
 	],
 providers: [],
