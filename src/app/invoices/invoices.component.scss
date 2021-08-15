@@ -36,12 +36,14 @@
     background-color: aqua;
     min-height:94vh;
     width: 100vw;
+    display: flex;
 }
 .start
 {
     // height:100%;
-    max-width: 100vw;
-    background-color: bisque;
+    flex-basis: 5%;
+    // max-width: 100vw;
+    // background-color: bisque;
 }
 
 .tools
@@ -108,3 +110,17 @@ button{
   cursor: pointer;
 }
 
+.invoices{
+    flex-basis: 95%;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.invoiceTable{
+    width: 80%;
+    height: 80%;
+    background-color: white;
+}
