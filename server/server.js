@@ -27,4 +27,20 @@ app.get('/mentions_timeline', (req, res) => {
     });
       
 });
+app.get('/get_trending', (req, res) => {
+  const params = { tweet_mode: 'extended', count: 10 };
+ 
+  client
+    .get(`trends/place.json?id=1`, params)
+    .then(timeline => {
+       
+      res.send(timeline);
+    })
+    .catch(error => {
+    res.send(error);
+  });
+    
+});
+
 app.listen(3000, () => console.log('Server running'));
+

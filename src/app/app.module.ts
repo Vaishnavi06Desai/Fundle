@@ -31,6 +31,7 @@ import { BeachComponent } from './beach/beach.component';
 import { ForestComponent } from './forest/forest.component';
 import { HouseComponent } from './house/house.component';
 import { MallComponent } from './mall/mall.component';
+import { TrendingComponent } from './trending/trending.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { MallComponent } from './mall/mall.component';
     BeachComponent,
     ForestComponent,
     HouseComponent,
-    MallComponent
+    MallComponent,
+    TrendingComponent
   ],
   imports: [
     BrowserModule,
