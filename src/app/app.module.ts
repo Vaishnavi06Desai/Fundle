@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ChartsModule } from 'ng2-charts';
 
 import { AngularFireModule } from '@angular/fire';
 import {AngularFireAuthModule} from '@angular/fire/auth';
@@ -13,11 +14,13 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NavdrawerComponent } from './navdrawer/navdrawer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { WorkspacesComponent } from './workspaces/workspaces.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FormComponent } from './form/form.component';
 import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { PaymentComponent } from './payment/payment.component';
+import { WorkspaceComponent } from './workspace/workspace.component';
 
 @NgModule({
   declarations: [
@@ -26,10 +29,12 @@ import { PaymentComponent } from './payment/payment.component';
     HomeComponent,
     NavbarComponent,
     NavdrawerComponent,
+    WorkspacesComponent,
     ProjectsComponent,
     FormComponent,
     TwitterTimelineComponent,
-    PaymentComponent
+    PaymentComponent,
+    WorkspaceComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +44,8 @@ import { PaymentComponent } from './payment/payment.component';
     AngularFireAuthModule,
     AngularFirestoreModule,
 		ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule
 	],
 providers: [],
   bootstrap: [AppComponent]

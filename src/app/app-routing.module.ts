@@ -6,6 +6,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.component';
 import { PaymentComponent } from './payment/payment.component';
 
+import { WorkspaceComponent } from './workspace/workspace.component';
+  
 const routes: Routes = [
     {
         path: 'home',
@@ -26,7 +28,11 @@ const routes: Routes = [
   {
     path: 'payment',
     component: PaymentComponent
-  }
+  },
+    {
+      path: 'workspace',
+      component: WorkspaceComponent
+    },
 ];
 
 @NgModule({
