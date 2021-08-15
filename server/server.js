@@ -3,10 +3,10 @@ const Twitter = require('twit');
  
 const app = express();
 const client = new Twitter({
-  consumer_key: 'NA',
-  consumer_secret: 'NA',
-  access_token: 'NA',
-  access_token_secret: 'NA'
+  consumer_key: 'QCsz3FgTFnKHqF2YTVKcgeUcE',
+  consumer_secret: 'YjWkxMVKFRYv2zPcpleEjUKWZBb69jEDfC5x7BC6Uej9Nwk0Up',
+  access_token: 'QCsz3FgTFnKHqF2YTVKcgeUcE',
+  access_token_secret: 'YjWkxMVKFRYv2zPcpleEjUKWZBb69jEDfC5x7BC6Uej9Nwk0Up'
 });
  
  
