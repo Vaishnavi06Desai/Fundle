@@ -1,1 +1,12 @@
-<p>workspaces works!</p>
+<div class="main">
+    <div class="start">
+
+    </div>
+    <div class="tools">
+        <div class="icon" *ngFor="let x of tools">
+            <a href={{x.link}}>
+                <img alt={{x.alttext}} src={{x.icon}} height="20px">
+            </a>
+        </div>
+    </div>
+</div>
