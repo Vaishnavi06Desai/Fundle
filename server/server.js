@@ -13,11 +13,11 @@ const client = new Twitter({
 app.use(require('cors')());
 app.use(require('body-parser').json());
  
-app.get('/home_timeline', (req, res) => {
+app.get('/mentions_timeline', (req, res) => {
     const params = { tweet_mode: 'extended', count: 10 };
    
     client
-      .get(`statuses/home_timeline`, params)
+      .get(`statuses/mentions_timeline`, params)
       .then(timeline => {
          
         res.send(timeline);

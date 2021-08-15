@@ -1,28 +1,30 @@
 <div class="main">
     <div class="start">
-        <div class="cards">
-            <div class="container" *ngFor="let y of proj" style="border-radius: 15px">
-                <!-- *ngFor="let y of cards"> -->
+        <div class="information">
+            <div class="cards">
+                <div class="container" *ngFor="let y of proj" style="border-radius: 15px">
+                    <!-- *ngFor="let y of cards"> -->
 
-                <div class="card">
-                    <div class="face face1">
-                        <div class="content">
-                            <!-- <span class="stars"></span> -->
-                            <h2 class="Projname">{{y.projname}}</h2>
-                            <p class="Info">{{y.projinfo}}</p>
+                    <div class="card">
+                        <div class="face face1">
+                            <div class="content">
+                                <!-- <span class="stars"></span> -->
+                                <h2 class="Projname">{{y.projname}}</h2>
+                                <p class="Info">{{y.projinfo}}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="face face2">
-                        <h2>{{y.projname}}</h2>
+                        <div class="face face2">
+                            <h2>{{y.projname}}</h2>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="tools">
                 <div class="icon" *ngFor="let x of tools">
                     <span tooltip="{{x.tooltip}}" placement="right">
-                        <a href="{{x.link}}">
+                        <div routerLink="{{x.link}}">
                             <img alt="{{x.alttext}}" src="{{x.icon}}" height="25px">
-                        </a>
+                        </div>
                     </span>
                 </div>
                 <div>
