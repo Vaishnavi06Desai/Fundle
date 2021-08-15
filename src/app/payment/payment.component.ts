@@ -31,7 +31,7 @@ export class PaymentComponent implements OnInit {
   payment() {
 
     this.httpClient.post<any>('https://api.razorpay.com/v1/payment_links/',this.json, {
-      headers: { 'Authorization': 'Basic cnpwX3Rlc3RfSVYzeUtxbnNrRk92VWc6QmFPbUtlSTF3dFF2bjlKRHRSZ3RGSnZZ'}
+      headers: { 'Authorization': 'Basic cnpwX3Rlc3RfSVYzeUtxbnNrRk92VWc6QmFPbUtlSTF3dFF2bjlKRHRSZ3RGSnZZ','Access-Control-Allow-Origin':'*'}
     }).subscribe(
       (res) => {
         console.log(res);
