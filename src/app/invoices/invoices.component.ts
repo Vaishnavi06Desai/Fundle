@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { tools2 } from '../JSONData/tool';
-import { FormControl, FormGroup } from '@angular/forms';
 import { FormBase } from '../form-template/form-base';
 import { TextboxField } from '../form-template/form-textbox';
+import { tools2 } from '../JSONData/tool';
+import { FormControl, FormGroup } from '@angular/forms';
 
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireStorage, AngularFireUploadTask } from '@angular/fire/storage';
