@@ -18,6 +18,10 @@ import { WorkspacesComponent } from './workspaces/workspaces.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FormComponent } from './form/form.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
+// import {} from '@angular/material'
+import { TooltipModule } from 'ng2-tooltip-directive';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { InvoicesComponent } from './invoices/invoices.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,8 @@ import { WorkspaceComponent } from './workspace/workspace.component';
     WorkspacesComponent,
     ProjectsComponent,
     FormComponent,
-    WorkspaceComponent
+    WorkspaceComponent,
+    InvoicesComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +43,8 @@ import { WorkspaceComponent } from './workspace/workspace.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    MatTooltipModule,
+    TooltipModule,
 		ReactiveFormsModule,
     ChartsModule
 	],
