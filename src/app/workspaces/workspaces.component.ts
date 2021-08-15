@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { tools } from '../JSONData/tool';
 import { projects } from '../JSONData/projects';
 import { FormControl, FormGroup } from '@angular/forms';
+import { FormBase } from '../form-template/form-base';
+import { TextboxField } from '../form-template/form-textbox';
 
 
 @Component({
@@ -17,6 +19,36 @@ export class WorkspacesComponent implements OnInit {
   collabpopup: boolean;
 
   constructor() { }
+  Projects: FormBase<string>[] = [
+
+    new TextboxField({
+      key: 'Project Name',
+      label: 'Project Name',
+      required: true,
+    }),
+
+    new TextboxField({
+      key: 'Brief',
+      label: 'Brief',
+      required: true,
+      // type: 'email',
+    })
+  ];
+  Collaboration: FormBase<string>[] = [
+
+    new TextboxField({
+      key: 'Company Name',
+      label: 'Comapany Name',
+      required: true,
+    }),
+
+    new TextboxField({
+      key: 'Brief',
+      label: 'Brief',
+      required: true,
+      // type: 'email',
+    })
+  ];
 
   ngOnInit(): void {
 

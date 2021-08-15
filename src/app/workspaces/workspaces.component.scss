@@ -74,13 +74,13 @@ button{
 }
 .add
 {
-  height:40vh;
-  width: 40vh;
-  background-color: #fff;
+  // height:100%;
+  // width: 100%;
+  background-color: var(--peach);
   // color: #fff;
   position:absolute;
   top:15vh;
-  left:40vw;
+  left:25vw;
 }
 .close
 {
