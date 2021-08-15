@@ -25,8 +25,8 @@
                     Upload your Invoice
                   </div>
                   <form class="form">
-                    Name of the Company: <input class="input" placeholder="Company Name" >
-                    Date: <input class="input" placeholder="Date" type="date" >
+                    Name of the Company: <input class="input" placeholder="Company Name" id="name" >
+                    Date: <input class="input" placeholder="Date" type="date" id="date">
                     Upload invoice: <input type="file" id="file" (change)="uploadinvoice($event)" class="input" >
                     <div class="submitbut" (click)="submit()">
                       Submit

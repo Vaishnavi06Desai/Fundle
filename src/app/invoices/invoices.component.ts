@@ -23,40 +23,40 @@ export class InvoicesComponent implements OnInit {
   invoice:any;
   userID:any;
   downloadUrl:any;
+  date:any;
+  compname:any;
 
   constructor(private as: AuthService, private db: AngularFirestore, private router: Router, private storage: AngularFireStorage) { }
- Invoices: FormBase<string>[] = [
+//  Invoices: FormBase<string>[] = [
 
-    new TextboxField({
-      key: 'Company Name',
-      label: 'Company Name',
-      required: true,
-    }),
+//     new TextboxField({
+//       key: 'CompanyName',
+//       label: 'Company Name',
+//       required: true,
+//     }),
 
-    new TextboxField({
-      key: 'Date',
-      label: 'Date',
-      required: true,
-      type: 'date',
-    }),
-    new TextboxField({
-      key: 'Upload File',
-      label: 'Upload File',
-      required: true,
-      type: 'file',
-    }),
-  ];
+//     new TextboxField({
+//       key: 'Date',
+//       label: 'Date',
+//       required: true,
+//       type: 'date',
+//     }),
+//     new TextboxField({
+//       key: 'Upload File',
+//       label: 'Upload File',
+//       required: true,
+//       type: 'file',
+//     }),
+  // ];
   ngOnInit(): void {
     this.tools=tools2;
     this.invpopup=false;
-    // this.as.getUserState()
-    //   .subscribe(user => {
-    //     if(user == null){this.router.navigate(['/login'])}
-    //     this.userID = user.uid;
-    //     //  this.store("...");
-    //     //console.log(farm, id);
-    //   })
-    this.userID="afbXTAuCgYbkjyfd2b4k52ljATM2"
+    this.as.getUserState()
+    .subscribe(user => {
+      if(user == null){this.router.navigate(['/signin'])}
+      this.userID = user.uid;
+      // this.getProjects();
+    })
   }
   addinvoices() {
     this.invpopup = true;
@@ -65,13 +65,16 @@ export class InvoicesComponent implements OnInit {
   submit(){
     this.invpopup = false;
     // const path = `${this.userID}/invoice/${this.invoice.name}`;
-    const path = `invoices/${this.invoice.name}`;
+    const path = `Invoices/${this.invoice.name}`;
+    const dbpath= `Invoices/${this.userID}/invoice`
     const ref = this.storage.ref(path);
+    // this.compname = name;
+    // this.date = date;
     this.storage.upload(path, this.invoice).then(
       ress => {
         ref.getDownloadURL().subscribe(res => {
           console.log(res);
-          this.db.collection("Invoices").add({Link: res, AddedForReview: "No", uid: this.userID}).then(e => {
+          this.db.collection(dbpath).add({Link: res, uid: this.userID}).then(e => {
             // 
             console.log(e)
             this.router.navigate(['/invoices'])
