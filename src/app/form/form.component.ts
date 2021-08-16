@@ -15,6 +15,7 @@ export class FormComponent implements OnInit {
   @Input() questions: FormBase<string>[] | null = [];
   @Input() value: number;
   @Input() name: string;
+  @Input() docid: string;
   @Output() onSubmitEmit: EventEmitter<any> = new EventEmitter<any>();
   form!: FormGroup;
   payLoad = '';
@@ -33,7 +34,8 @@ export class FormComponent implements OnInit {
   onSubmit() {
     this.payLoad = JSON.stringify(this.form.getRawValue());
     // this.fb.onSubmit(0, this.form.value);
-    this.fb.onSubmit(this.value, this.userID, this.form.value);
+     console.log(this.value, this.userID, this.form.value, this.docid);
+    this.fb.onSubmit(this.value, this.userID, this.form.value, this.docid);
   }
 
 }
