@@ -12,8 +12,9 @@
     min-width: 100%;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(90deg, #c7e4ff, #bab6f0 100%);
-    // background-image: url(../../assets/images/harrypotterbackground.jpg);
+    //background: linear-gradient(90deg, #c7e4ff, #bab6f0 100%);
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/fundle-f51a5.appspot.com/o/assets%2Ftry.png?alt=media&token=cd45e7f9-3d3f-464e-a407-943a8c0ea565");
+    //background-image: url(../../assets/images/harrypotterbackground.jpg);
     background-size: 100% 100%;
     
 }
@@ -44,7 +45,7 @@
     display: flex;
     border-radius: 2%;
     flex-direction: column;
-    // background-image: url("../../assets/images/harrypotter.jpg");
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/fundle-f51a5.appspot.com/o/assets%2F30ff07936ec8c506f7dd18a7d5d03814.jpg?alt=media&token=14fe350e-3f6b-4747-ae1b-3947861420a7");
     // opacity: 0.5;
     background-size: 100% 100%;
     overflow: hidden;
@@ -88,12 +89,12 @@
     position: relative;
     font-size: 150%;
     cursor: pointer;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .rightdeets::after{
     content: "";
-    border: white solid thin;
+    border: black solid thin;
     border-radius: 10px;
     position: absolute;
     width: 100%;
