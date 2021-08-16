@@ -12,23 +12,26 @@ Create, Manage, Analyze and Innovate!
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary>Table of Contents</summary>
-  <ol>
+ <ol>
     <li>
-      <a href="#The-problem-it-solves">The problem it solves</a></li>
-    <li> <a href="#Challenges-we-ran-into"># Challenges we ran into</a></li>
-   
-        <li><a href="#built-with">Built With</a></li>
-
+        <a href="#The-problem-it-solves">The problem it solves</a>
     </li>
+    <li> 
+      <a href="#Challenges-we-ran-into">Challenges we ran into</a>
+   </li>
+
     <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
+      <ul> <a href="#built-with">Built With</a></ul>
+   </li>
+    <li>
+        <a href="#getting-started">Getting Started</a>
+        <ul>
+            <li><a href="#installation">Installation</a></li>
+        </ul>
     </li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-  </ol>
+</ol>
 </details>
 
 # The problem it solves
