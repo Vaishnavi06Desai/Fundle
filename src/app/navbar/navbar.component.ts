@@ -16,7 +16,7 @@ export class NavbarComponent implements OnInit {
   ifwhite: boolean = false;
   nav: any;
   navdata: any;
-  user: string = "";
+  user: string = "user";
 
   // cart = faShoppingCart;
   ngOnInit(): void {

@@ -15,24 +15,25 @@ import { ForestComponent } from './forest/forest.component';
 import { HouseComponent } from './house/house.component';
 import { MallComponent } from './mall/mall.component';
 import { ProfileComponent } from './profile/profile.component';
+import { TrendingComponent } from './trending/trending.component';
 
-  
+
 const routes: Routes = [
-    {
-        path: 'home',
-        component: HomeComponent
-    },
-    {
-      path: 'home_timeline',
-      component: TwitterTimelineComponent
+  {
+    path: 'home',
+    component: HomeComponent
   },
-   {
-        path: 'signin',
-        component: SigninComponent
-    },
-    {
-      path: 'projects',
-      component: ProjectsComponent
+  {
+    path: 'home_timeline',
+    component: TwitterTimelineComponent
+  },
+  {
+    path: 'signin',
+    component: SigninComponent
+  },
+  {
+    path: 'projects',
+    component: ProjectsComponent
   },
   {
     path: 'payment',
@@ -74,6 +75,42 @@ const routes: Routes = [
       path: 'profile',
       component: ProfileComponent
   },
+  {
+    path: 'workspaces',
+    component: WorkspacesComponent
+  },
+  {
+    path: 'workspace',
+    component: WorkspaceComponent
+  },
+  {
+    path: 'beach',
+    component: BeachComponent
+  },
+  {
+    path: 'forest',
+    component: ForestComponent
+  },
+  {
+    path: 'house',
+    component: HouseComponent
+  },
+  {
+    path: 'mall',
+    component: MallComponent
+  },
+  {
+    path: 'saferoom',
+    component: SaferoomComponent
+  },
+  {
+    path: 'invoices',
+    component: InvoicesComponent
+  },
+  {
+    path:'trending',
+    component: TrendingComponent
+  }
 ];
 
 @NgModule({

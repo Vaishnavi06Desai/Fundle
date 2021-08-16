@@ -1,37 +1,51 @@
-<!-- <p>invoices works!</p>
-<p class="inv">invoices works!</p>
-
-<div class="flex-wrapper">
-    <div id="one">Header</div>
-    <div id="two">Nav</div>
-    <div id="three">Content</div>  
-    <div id="four">Footer</div>
-  </div> -->
-  
 <div class="main">
   <div class="start">
+    <!-- 
+      hello -->
     <div class="tools">
       <div class="icon" *ngFor="let x of tools">
         <span tooltip="{{x.tooltip}}" placement="right">
-            <a href="{{x.link}}">
-                <img alt="{{x.alttext}}" src="{{x.icon}}" height="25px">
-            </a>
+          <div routerLink="{{x.link}}">
+            <img alt="{{x.alttext}}" src="{{x.icon}}" height="25px">
+          </div>
         </span>
-    </div>
-    <div>
-      <span tooltip="Add Invoices" placement="right">
+      </div>
+      <div>
+        <span tooltip="Add Invoices" placement="right">
           <button (click)='addinvoices()' height="4vh" width="2vw">
-              <img src="../../assets/images/add.png" height="25px">
+            <img src="../../assets/images/add.png" height="25px">
           </button>
           <div *ngIf="invpopup" class="add">
-              <div class="close" (click)="invpopup = false">
-                  <img src="../../assets/images/add.png" height="25px">
+            <div class="close" (click)="invpopup = false">
+              <img src="../../assets/images/add.png" height="25px">
+            </div>
+            <div class="forform">
+              <div class="formcont">
+                <div class="formtitle">
+                  Upload your Invoice
+                </div>
+                <form class="form">
+                  Name of the Company: <input class="input" placeholder="Company Name" id="name">
+                  Date: <input class="input" placeholder="Date" type="date" id="date">
+                  Upload invoice: <input type="file" id="file" (change)="uploadinvoice($event)" class="input">
+                  <div class="submitbut" (click)="submit()">
+                    Submit
+                  </div>
+                </form>
               </div>
-             
-              <button (click)='Submit()' height="6vh" width="15vw">Submit</button>
+            </div>
+            <!-- <app-form [questions]="Invoices" [value]="1" [name] = "'Add Projects'"></app-form> -->
+            <!-- <button (click)='Submit()' height="6vh" width="15vw">Submit</button> -->
           </div>
-      </span>
+        </span>
+      </div>
+    </div>
   </div>
+  <div class="invoices">
+    <!-- <div class="information"> -->
+      <div class="invoiceTable">
+
+      </div>
     </div>
-    </div>
+  <!-- </div> -->
 </div>
