@@ -5,7 +5,7 @@ export let navbar = [
     },
     {
         "name":"Invoice",
-        "link":"/invoice",
+        "link":"/invoices",
     },
     {
         "name":"Profile",
