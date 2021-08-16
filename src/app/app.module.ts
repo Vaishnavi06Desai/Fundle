@@ -33,6 +33,7 @@ import { HouseComponent } from './house/house.component';
 import { MallComponent } from './mall/mall.component';
 import { ProfileComponent } from './profile/profile.component';
 import { TrendingComponent } from './trending/trending.component';
+import { PaymentgatewayComponent } from './paymentgateway/paymentgateway.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,8 @@ import { TrendingComponent } from './trending/trending.component';
     ForestComponent,
     HouseComponent,
     MallComponent,
+    TrendingComponent,
+    PaymentgatewayComponent,
     ProfileComponent,
     TrendingComponent
   ],
