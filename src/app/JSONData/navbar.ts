@@ -1,10 +1,10 @@
 export let navbar = [
     {
-        "name":"Workspace",
+        "name":"Workspaces",
         "link":"/workspaces",
     },
     {
-        "name":"Invoice",
+        "name":"Invoices",
         "link":"/invoices",
     },
     {

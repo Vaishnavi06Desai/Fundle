@@ -40,8 +40,8 @@
           <img src="../../assets/images/add.png" height="25px">
         </div>
         <div class="inputs">
-          <app-form [questions]="Requests" [value]="1" [name] = "'Request a payment'"></app-form>
-      </div>
+          <app-form [questions]="Requests" [value]="3" [name]="'Request a payment'"></app-form>
+        </div>
       </div>
     </div>
   </div>
@@ -82,7 +82,7 @@
           <div class="heading2" style="flex-basis:20%">
             Email-id
           </div>
-          <div class="heading3"  style="flex-basis: 10%">
+          <div class="heading3" style="flex-basis: 10%">
             Amount
           </div>
           <div class="heading3">
@@ -90,18 +90,20 @@
           </div>
         </div>
         <div class="content">
-          <div class="heading" *ngFor="let y of Inv" style="background-color: var(--blgr);">
-            <div class="heading1" style="flex-basis:20%">
-              Thisis my Name
-            </div>
-            <div class="heading2" style="flex-basis:20%">
-              Email@id.com
-            </div>
-            <div class="heading3" style="flex-basis:10%">
-              100000000
-            </div>
-            <div class="heading3" >
-              This is Description
+          <div *ngFor="let y of pay" style="background-color: var(--blgr);">
+            <div *ngIf="y.amount != y.amount_paid" class="heading">
+              <div class="heading1" style="flex-basis:20%">
+                {{y.customer.name}}
+              </div>
+              <div class="heading2" style="flex-basis:20%">
+                {{y.customer.email}}
+              </div>
+              <div class="heading3" style="flex-basis:10%">
+                {{y.amount}}
+              </div>
+              <div class="heading3">
+                {{y.description}}
+              </div>
             </div>
           </div>
         </div>
@@ -114,7 +116,7 @@
           <div class="heading2" style="flex-basis:20%">
             Email-id
           </div>
-          <div class="heading3"  style="flex-basis: 10%">
+          <div class="heading3" style="flex-basis: 10%">
             Amount
           </div>
           <div class="heading3">
@@ -122,18 +124,20 @@
           </div>
         </div>
         <div class="content">
-          <div class="heading" *ngFor="let y of Inv" style="background-color: var(--blgr);">
-            <div class="heading1" style="flex-basis:20%">
-              Thisis my Name
-            </div>
-            <div class="heading2" style="flex-basis:20%">
-              Email@id.com
-            </div>
-            <div class="heading3" style="flex-basis:10%">
-              100000000
-            </div>
-            <div class="heading3" >
-              This is Description
+          <div *ngFor="let y of pay" style="background-color: var(--blgr);">
+            <div *ngIf="y.amount == y.amount_paid" class="heading">
+              <div class="heading1" style="flex-basis:20%">
+                {{y.customer.name}}
+              </div>
+              <div class="heading2" style="flex-basis:20%">
+                {{y.customer.email}}
+              </div>
+              <div class="heading3" style="flex-basis:10%">
+                {{y.amount}}
+              </div>
+              <div class="heading3">
+                {{y.description}}
+              </div>
             </div>
           </div>
         </div>
