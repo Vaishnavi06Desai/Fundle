@@ -11,5 +11,9 @@ export let navbar = [
         "name":"Profile",
         "link":"/profile",
     },
+    {
+        "name":"saferoom",
+        "link":"/saferoom",
+    }
     
 ]
