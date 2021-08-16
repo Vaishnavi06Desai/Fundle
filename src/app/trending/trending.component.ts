@@ -56,7 +56,7 @@ export class TrendingComponent implements OnInit {
       (res) => {
         console.log(res);
         console.log(res[0].trends[0]);
-        
+        this.myTimeline=res[0].trends;
 
       },
       (err) => {

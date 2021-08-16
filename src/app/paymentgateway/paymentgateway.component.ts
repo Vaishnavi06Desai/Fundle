@@ -5,11 +5,11 @@ import { AuthService } from '../services/auth.service';
 import { ExternalLibraryService } from '../utils';
 declare let Razorpay: any;
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.scss']
+  selector: 'app-paymentgateway',
+  templateUrl: './paymentgateway.component.html',
+  styleUrls: ['./paymentgateway.component.scss']
 })
-export class ProfileComponent implements OnInit  {
+export class PaymentgatewayComponent implements OnInit {
 
   constructor(private as: AuthService, private router: Router, private db: AngularFirestore, private zone: NgZone,private cd: ChangeDetectorRef,  private razorpayService: ExternalLibraryService) { }
   response: any;
