@@ -2,10 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SigninComponent } from './signin/signin.component';
 import { HomeComponent } from './home/home.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.component';
-import { PaymentComponent } from './payment/payment.component';
-
 import { WorkspacesComponent } from './workspaces/workspaces.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
 import { InvoicesComponent } from './invoices/invoices.component';
@@ -16,74 +12,17 @@ import { HouseComponent } from './house/house.component';
 import { MallComponent } from './mall/mall.component';
 import { ProfileComponent } from './profile/profile.component';
 import { TrendingComponent } from './trending/trending.component';
-import { PaymentgatewayComponent } from './paymentgateway/paymentgateway.component';
 
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    pathMatch:'full'
-  },
-  {
-    path: 'home_timeline',
-    component: TwitterTimelineComponent
+    pathMatch: 'full'
   },
   {
     path: 'signin',
     component: SigninComponent
-  },
-  {
-    path: 'projects',
-    component: ProjectsComponent
-  },
-  {
-    path: 'payment',
-    component: PaymentComponent
-  },
-    {
-      path: 'Workspaces',
-      component: WorkspacesComponent
-    },
-    {
-      path: 'workspace',
-      component: WorkspaceComponent
-    },
-    {
-      path: 'beach',
-      component:BeachComponent
-    },
-    {
-      path: 'forest',
-      component: ForestComponent
-    },
-    {
-      path: 'house',
-      component: HouseComponent
-    },
-    {
-      path: 'mall',
-      component: MallComponent
-    },
-    {
-      path: 'saferoom',
-      component: SaferoomComponent
-    },
-    {
-      path: 'invoices',
-      component: InvoicesComponent
-    },
-    {
-      path: 'profile',
-      component: ProfileComponent
-  },
-  {
-    path: 'workspaces',
-    component: WorkspacesComponent
-  },
-  {
-    path: 'workspace',
-    component: WorkspaceComponent
   },
   {
     path: 'beach',
@@ -106,15 +45,24 @@ const routes: Routes = [
     component: SaferoomComponent
   },
   {
+    path: 'profile',
+    component: ProfileComponent
+  },
+  {
+    path: 'workspaces',
+    component: WorkspacesComponent
+  },
+  {
+    path: 'workspace',
+    component: WorkspaceComponent
+  },
+  {
     path: 'invoices',
     component: InvoicesComponent
   },
   {
-    path:'trending',
+    path: 'trending',
     component: TrendingComponent
-  },{
-    path:'paymentgateway',
-    component:PaymentgatewayComponent
   },
   {
     path: 'home',
