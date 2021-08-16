@@ -1,21 +1,21 @@
 export let tools = [
     {
         "icon":"../../assets/images/trending.png",
-        "link":"/Workspaces",
+        "link":"/workspaces",
         "alttext":"Trending",
         "tooltip":"Trending",
         // "func":"(click)='hey()'"
     },
     {
         "icon":"../../assets/images/bot.png",
-        "link":"/Workspaces",
+        "link":"/workspaces",
         "alttext":"Suggestion Bot",
         "tooltip":"Suggestion Bot",
         // "func":"(click)='hey()'"
     },
     {
         "icon":"../../assets/images/Research.png",
-        "link":"/Workspaces",
+        "link":"/workspaces",
         "alttext":"Research",
         "tooltip":"Research",
         // "func":"(click)='hey()'"
@@ -24,21 +24,21 @@ export let tools = [
 export let tools2 = [
     {
         "icon":"../../assets/images/dashboard.png",
-        "link":"",
+        "link":"/invoices",
         "alttext":"Dashboard",
         "tooltip":"Dashboard",
         // "func":"(click)='hey()'"
     },
     {
         "icon":"../../assets/images/requested.png",
-        "link":"",
+        "link":"invoices",
         "alttext":"Requested",
         "tooltip":"Requested",
         // "func":"(click)='hey()'"
     },
     {
         "icon":"../../assets/images/payout.png",
-        "link":"",
+        "link":"invoices",
         "alttext":"Payout",
         "tooltip":"Payout",
         // "func":"(click)='hey()'"
