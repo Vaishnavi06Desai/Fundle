@@ -115,6 +115,10 @@ const routes: Routes = [
   },{
     path:'paymentgateway',
     component:PaymentgatewayComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent
   }
 ];
 
