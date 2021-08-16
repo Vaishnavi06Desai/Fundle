@@ -96,4 +96,8 @@ export class WorkspacesComponent implements OnInit {
       console.log(this.projects[0].payload.doc.data());
     })
   }
+
+  toWorkspace(docid: string){
+    this.router.navigate(['/workspace'], { queryParams: { id: docid } })
+  }
 }
