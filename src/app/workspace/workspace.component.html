@@ -6,11 +6,12 @@
         </div>
         
         <div class="modulebody" style="display: flex;">
-            <div style="font-size: 150%; padding-top: 1%; background-color: rgb(230, 228, 228); height: fit-content;">Project#1</div>
+            <div style="font-size: 150%; padding-top: 1%; background-color: rgb(230, 228, 228); height: fit-content;">{{metadata.payload.data().project_name}}</div>
             <div class="projectbody" style="display: flex;">
                 <div class="projectbrief" style="font-size: x-large; display: flex; background-color: rgb(230, 228, 228);border: 2px solid #ff9684;"> Brief
-                <p style="padding-top: 2%;padding-left: 2%; font-size: 16px;">Campaign Reporting Requirements:
-                    # of engagements, views, link clicks
+                <p style="padding-top: 2%;padding-left: 2%; font-size: 16px;">
+                    {{metadata.payload.data().brief}}
+                    <!-- # of engagements, views, link clicks
                     ------------------------------------------
                     Content Review Process:
                     Yes, we request that all creators submit their image + caption via email (hello@brandx.com) prior to posting content, for us to verify, before 25th August.
@@ -21,7 +22,8 @@
                         Payment:
                     Send invoice / payment request on the first of every month to hello@brandx.com.</p>
                     <p style="padding-top: 2%;padding-left: 2%; font-size: 16px;">------------------------------------------
-                        Some sample images have been provided in the mood board for your reference (of tone, style, resolution, etc)</p>
+                        Some sample images have been provided in the mood board for your reference (of tone, style, resolution, etc) -->
+                    </p>
              </div>
                 <div class="projectboards" style="display: flex; background-color: rgb(230, 228, 228)"> 
                     <div class="board1" style="font-size: x-large; background-color: #ffbdb2;width: 23%;height:60%; display: flex;justify-content:center;"> To do 
