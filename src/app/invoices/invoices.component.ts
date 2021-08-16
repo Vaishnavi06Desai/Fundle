@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthService } from '../services/auth.service';
 import { HttpClient } from '@angular/common/http';
+import { query } from '@angular/animations';
 
 @Component({
   selector: 'app-invoices',
@@ -218,4 +219,9 @@ export class InvoicesComponent implements OnInit {
       }
     )
   }
+
+  // getaddreqs(docid:string)
+  // {
+  //   {queryParams:{id: docid}}
+  // }
 }
