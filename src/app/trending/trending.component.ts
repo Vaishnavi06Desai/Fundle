@@ -1,14 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { TwitterserviceService } from '../../../server/twitterservice.service';
-
+import { HttpClient } from '@angular/common/http';
 import { tools } from '../JSONData/tool';
-import { FormControl, FormGroup } from '@angular/forms';
 import { FormBase } from '../form-template/form-base';
 import { TextboxField } from '../form-template/form-textbox';
-import { Router } from '@angular/router';
-import { AuthService } from '../services/auth.service';
-import { AngularFirestore } from '@angular/fire/firestore';
+
 @Component({
   selector: 'app-trending',
   templateUrl: './trending.component.html',
@@ -24,7 +19,7 @@ export class TrendingComponent implements OnInit {
   userID: any;
   projects: Array<any> = [];
   
-  constructor(private httpClient: HttpClient, private api: TwitterserviceService,private router: Router, private as: AuthService, private db: AngularFirestore) { }
+  constructor(private httpClient: HttpClient) { }
   Collaboration: FormBase<string>[] = [
 
     new TextboxField({

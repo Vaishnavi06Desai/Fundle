@@ -15,12 +15,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NavdrawerComponent } from './navdrawer/navdrawer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WorkspacesComponent } from './workspaces/workspaces.component';
-import { ProjectsComponent } from './projects/projects.component';
 import { FormComponent } from './form/form.component';
 import { FormTemplateComponent } from './form-template/form-template.component';
-import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { PaymentComponent } from './payment/payment.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
 // import {} from '@angular/material'
 import { TooltipModule } from 'ng2-tooltip-directive';
@@ -33,7 +30,6 @@ import { HouseComponent } from './house/house.component';
 import { MallComponent } from './mall/mall.component';
 import { ProfileComponent } from './profile/profile.component';
 import { TrendingComponent } from './trending/trending.component';
-import { PaymentgatewayComponent } from './paymentgateway/paymentgateway.component';
 
 @NgModule({
   declarations: [
@@ -43,11 +39,8 @@ import { PaymentgatewayComponent } from './paymentgateway/paymentgateway.compone
     NavbarComponent,
     NavdrawerComponent,
     WorkspacesComponent,
-    ProjectsComponent,
     FormComponent,
     FormTemplateComponent,
-    TwitterTimelineComponent,
-    PaymentComponent,
     WorkspaceComponent,
     InvoicesComponent,
     SaferoomComponent,
@@ -56,7 +49,6 @@ import { PaymentgatewayComponent } from './paymentgateway/paymentgateway.compone
     HouseComponent,
     MallComponent,
     TrendingComponent,
-    PaymentgatewayComponent,
     ProfileComponent,
     TrendingComponent
   ],

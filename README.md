@@ -1,29 +1,31 @@
 # Fundle
+Create, Manage, Analyze and Innovate!
 
+# The problem it solves
 
-This project was generated 
-with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
+Our Application Fundle is a one stop solution for creators to create, manage, analyze and innovate! A single tool to help them analyze their requirements,their needs, their collaborations, payments, donations, to rest, to brainstorm ideas, organise work,payments and invoices, check trending topics and so much more!
 
-## Development server
+Our Key Features:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+• Dashboard: A single place to see the community engagement from different social media applications and view them instantly. A creator usually has a profile on various popular applications and having everything displayed in one go saves a lot of time and analyses the reach much better!
 
-## Code scaffolding
+• Workspaces: A place to see the trending content, check some recent articles on their content, stay organised by adding their collaborations and projects on the application.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+• Workspace: A single place to list down all the ideas and a To-Do list, and some edits as well. Having all these in single place magically saves a lot of time and effort!
 
-## Build
+• Invoices: A single page to record all transactions. A toolbar on the side helps you see, and display received payments, requested payments and see added invoices. One can also add and invoice or request a payment by filling up a simple form.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+• Profile Page: A public profile page which can be further shared and viewed by other people leading to increased reach out, along with a donation link by which people can support their favourite creators!
 
-## Running unit tests
+• Safe-room: At times all creators need is a place to rest and here comes the saferooms! A place to calm down and listen to the mind soothing beats and also visit various places like Beach, Forest, Calm room and even mall, an immersive experience to interact with surroundings that feel totally surreal! (3D experience)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Challenges we ran into
 
-## Running end-to-end tests
+Implementing all the features in the given time constraint was one of the major challenges for us! Managing our time the right way helped us a lot in successfully building the product. We faced a few issues while implementing the razorpay api for donation. It was an amazing learning experience for us overall!
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Technologies we used
+Angular Firebase Node.ja
 
-## Further help
+# Video Demo
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+https://youtu.be/IKwJqOGcQHQ
