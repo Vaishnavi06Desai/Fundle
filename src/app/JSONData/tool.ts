@@ -1,7 +1,7 @@
 export let tools = [
     {
         "icon":"../../assets/images/trending.png",
-        "link":"/workspaces",
+        "link":"/trending",
         "alttext":"Trending",
         "tooltip":"Trending",
         // "func":"(click)='hey()'"
