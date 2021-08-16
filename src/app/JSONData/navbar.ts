@@ -1,6 +1,15 @@
 export let navbar = [
     {
-        "name":"Projects",
-        "link":"/projects",
+        "name":"Workspace",
+        "link":"/workspaces",
     },
+    {
+        "name":"Invoice",
+        "link":"/invoice",
+    },
+    {
+        "name":"Profile",
+        "link":"/profile",
+    },
+    
 ]
