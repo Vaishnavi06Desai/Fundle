@@ -21,8 +21,9 @@ import { PaymentgatewayComponent } from './paymentgateway/paymentgateway.compone
 
 const routes: Routes = [
   {
-    path: 'home',
-    component: HomeComponent
+    path: '',
+    component: HomeComponent,
+    pathMatch:'full'
   },
   {
     path: 'home_timeline',
