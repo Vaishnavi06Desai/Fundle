@@ -106,6 +106,7 @@ export class InvoicesComponent implements OnInit {
     this.Payments = false;
     this.reqpopup = false;
 
+    this.getpayments();
     this.as.getUserState()
       .subscribe(user => {
         if (user == null) { this.router.navigate(['/signin']) }
@@ -212,16 +213,14 @@ export class InvoicesComponent implements OnInit {
   getpayments(){
     this.httpClient.get<any>('https://fundle-backend.herokuapp.com/v1/fundle/get_Payment').subscribe(
       (res)=>{
+        console.log(res);
         this.pay = res;
+        this.pay = this.pay["payment_links"]
+        console.log(this.pay)
       },
       (err) => {
         this.error = err;
       }
     )
   }
-
-  // getaddreqs(docid:string)
-  // {
-  //   {queryParams:{id: docid}}
-  // }
 }
