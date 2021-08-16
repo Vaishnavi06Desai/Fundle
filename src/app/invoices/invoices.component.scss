@@ -89,6 +89,7 @@
     background-color: #fff;
     border: solid black;
     width: 80vw;
+    min-height: 50vh;
     margin:10vh;
     border-radius: 15px;;
 }
@@ -135,7 +136,8 @@ background-color: var(--peach);
 }
 
 .invoices{
-    flex-basis: 95%;
+    // flex-basis: 95%;
+    min-height: 100%;
     background-color: aquamarine;
     display: flex;
     flex-direction: column;
