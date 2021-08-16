@@ -16,6 +16,7 @@ import { HouseComponent } from './house/house.component';
 import { MallComponent } from './mall/mall.component';
 import { ProfileComponent } from './profile/profile.component';
 import { TrendingComponent } from './trending/trending.component';
+import { PaymentgatewayComponent } from './paymentgateway/paymentgateway.component';
 
 
 const routes: Routes = [
@@ -110,6 +111,9 @@ const routes: Routes = [
   {
     path:'trending',
     component: TrendingComponent
+  },{
+    path:'paymentgateway',
+    component:PaymentgatewayComponent
   }
 ];
 
