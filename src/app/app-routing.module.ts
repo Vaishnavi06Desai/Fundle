@@ -14,6 +14,7 @@ import { BeachComponent } from './beach/beach.component';
 import { ForestComponent } from './forest/forest.component';
 import { HouseComponent } from './house/house.component';
 import { MallComponent } from './mall/mall.component';
+import { ProfileComponent } from './profile/profile.component';
 
   
 const routes: Routes = [
@@ -68,7 +69,11 @@ const routes: Routes = [
     {
       path: 'invoices',
       component: InvoicesComponent
-    }
+    },
+    {
+      path: 'profile',
+      component: ProfileComponent
+  },
 ];
 
 @NgModule({

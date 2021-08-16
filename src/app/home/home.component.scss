@@ -21,6 +21,8 @@
     flex-direction: column;
     justify-content:flex-start;
     align-items:center;
+    border: 2px solid #ffd726;
+    border-width: thick;
 }
 .title{
     height: 5vh;
@@ -122,7 +124,7 @@
     margin-top: 3vh;
     //margin-left: 50vh;
     border-radius: 25px;
-    border: 2px solid #b2ced6;
+    border: 2px solid #ffac5e;
     border-width: thick;
     background-color: #ffffff;
     display: flex;

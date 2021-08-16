@@ -30,6 +30,7 @@ import { BeachComponent } from './beach/beach.component';
 import { ForestComponent } from './forest/forest.component';
 import { HouseComponent } from './house/house.component';
 import { MallComponent } from './mall/mall.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { MallComponent } from './mall/mall.component';
     BeachComponent,
     ForestComponent,
     HouseComponent,
-    MallComponent
+    MallComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
