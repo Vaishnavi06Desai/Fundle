@@ -31,6 +31,7 @@ import { BeachComponent } from './beach/beach.component';
 import { ForestComponent } from './forest/forest.component';
 import { HouseComponent } from './house/house.component';
 import { MallComponent } from './mall/mall.component';
+import { ProfileComponent } from './profile/profile.component';
 import { TrendingComponent } from './trending/trending.component';
 import { PaymentgatewayComponent } from './paymentgateway/paymentgateway.component';
 
@@ -55,7 +56,9 @@ import { PaymentgatewayComponent } from './paymentgateway/paymentgateway.compone
     HouseComponent,
     MallComponent,
     TrendingComponent,
-    PaymentgatewayComponent
+    PaymentgatewayComponent,
+    ProfileComponent,
+    TrendingComponent
   ],
   imports: [
     BrowserModule,

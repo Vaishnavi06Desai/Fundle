@@ -39,8 +39,22 @@ export let tools2 = [
     {
         "icon":"../../assets/images/payout.png",
         "link":"invoices",
-        "alttext":"Payout",
-        "tooltip":"Payout",
+        "alttext":"Payments",
+        "tooltip":"Payments",
+        // "func":"(click)='hey()'"
+    },
+    {
+        "icon":"../../assets/images/add.png",
+        "link":"invoices",
+        "alttext":"add invoice",
+        "tooltip":"add invoice",
+        // "func":"(click)='hey()'"
+    },
+    {
+        "icon":"../../assets/images/add.png",
+        "link":"invoices",
+        "alttext":"add request",
+        "tooltip":"add request",
         // "func":"(click)='hey()'"
     }
 ]

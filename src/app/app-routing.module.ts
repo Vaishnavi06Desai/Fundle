@@ -14,6 +14,7 @@ import { BeachComponent } from './beach/beach.component';
 import { ForestComponent } from './forest/forest.component';
 import { HouseComponent } from './house/house.component';
 import { MallComponent } from './mall/mall.component';
+import { ProfileComponent } from './profile/profile.component';
 import { TrendingComponent } from './trending/trending.component';
 import { PaymentgatewayComponent } from './paymentgateway/paymentgateway.component';
 
@@ -38,6 +39,42 @@ const routes: Routes = [
   {
     path: 'payment',
     component: PaymentComponent
+  },
+    {
+      path: 'Workspaces',
+      component: WorkspacesComponent
+    },
+    {
+      path: 'workspace',
+      component: WorkspaceComponent
+    },
+    {
+      path: 'beach',
+      component:BeachComponent
+    },
+    {
+      path: 'forest',
+      component: ForestComponent
+    },
+    {
+      path: 'house',
+      component: HouseComponent
+    },
+    {
+      path: 'mall',
+      component: MallComponent
+    },
+    {
+      path: 'saferoom',
+      component: SaferoomComponent
+    },
+    {
+      path: 'invoices',
+      component: InvoicesComponent
+    },
+    {
+      path: 'profile',
+      component: ProfileComponent
   },
   {
     path: 'workspaces',
