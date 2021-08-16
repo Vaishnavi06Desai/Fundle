@@ -31,6 +31,7 @@ import { BeachComponent } from './beach/beach.component';
 import { ForestComponent } from './forest/forest.component';
 import { HouseComponent } from './house/house.component';
 import { MallComponent } from './mall/mall.component';
+import { ProfileComponent } from './profile/profile.component';
 import { TrendingComponent } from './trending/trending.component';
 
 @NgModule({
@@ -53,6 +54,7 @@ import { TrendingComponent } from './trending/trending.component';
     ForestComponent,
     HouseComponent,
     MallComponent,
+    ProfileComponent,
     TrendingComponent
   ],
   imports: [

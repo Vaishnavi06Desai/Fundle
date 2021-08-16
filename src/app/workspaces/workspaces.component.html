@@ -1,6 +1,9 @@
 <div class="main">
     <div class="start">
         <div class="information">
+            <div class="title">
+                Your Workspaces
+            </div>
             <div class="cards">
                 <div class="container" *ngFor="let y of projects" style="border-radius: 15px" (click) = "toWorkspace(y.payload.doc.id)">
                     <!-- *ngFor="let y of cards"> -->
